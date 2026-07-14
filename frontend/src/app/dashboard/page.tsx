@@ -241,7 +241,7 @@ export default function DashboardPage() {
           </div>
         ) : tasks.length === 0 ? (
           <div className={styles.emptyState}>
-            <p>🎉 No tasks yet. Click <strong>"+ New Task"</strong> to create one!</p>
+            <p>🎉 No tasks yet. Click <strong>&ldquo;+ New Task&rdquo;</strong> to create one!</p>
           </div>
         ) : (
           <section className={styles.kanban}>

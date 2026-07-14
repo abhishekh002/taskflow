@@ -117,7 +117,7 @@ export default function LoginPage() {
           </div>
 
           <div className={styles.footerLink}>
-            Don't have an account? <Link href="/register">Register here</Link>
+            Don&apos;t have an account? <Link href="/register">Register here</Link>
           </div>
         </div>
       </main>
