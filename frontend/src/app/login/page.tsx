@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
 import Navbar from '@/components/Navbar';
 import styles from './login.module.css';
 
-export default function LoginPage() {
+function LoginForm() {
   const { login, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -124,3 +124,21 @@ export default function LoginPage() {
     </div>
   );
 }
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className={styles.page}>
+        <Navbar />
+        <main className={styles.main}>
+          <div className="glass-panel" style={{ padding: '40px', textAlign: 'center', maxWidth: '400px', margin: '0 auto' }}>
+            <p>Loading login form...</p>
+          </div>
+        </main>
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
