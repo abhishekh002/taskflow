@@ -2,6 +2,8 @@
 
 A full-stack task management system built with a Java Spring Boot backend and a Next.js frontend, featuring authentication, containerized deployment, and CI/CD.
 
+👉 **Live Demo (Frontend)**: [https://abhishekh002.github.io/taskflow/](https://abhishekh002.github.io/taskflow/)
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Tech Stack
